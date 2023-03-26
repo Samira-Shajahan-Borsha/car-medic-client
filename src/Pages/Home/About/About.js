@@ -15,7 +15,7 @@ const About = () => {
                     <h1 className="my-5 text-5xl font-bold">We are qualified <br /> & of experience <br /> in this field</h1>
                     <p className="py-5 text-xl">There are many variations of passages available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
                     <p className="mb-7 text-xl">The majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.  </p>
-                    <button className="btn btn-warning">Get More Info</button>
+                    <button className="btn border-0 bg-orange-600 hover:bg-orange-600 normal-case">Get More Info</button>
                 </div>
             </div>
         </div>
