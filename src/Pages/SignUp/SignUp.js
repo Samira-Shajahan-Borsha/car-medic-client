@@ -1,11 +1,28 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import loginImg from '../../assets/images/login/login.svg';
+import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 
 const SignUp = () => {
-    const handleLogin = event => {
+
+    const { createUser } = useContext(AuthContext);
+
+    const handleSignUp = event => {
         event.preventDefault();
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+
+        createUser(email, password)
+            .then(userCredential => {
+                const user = userCredential.user;
+                console.log(user);
+                form.reset();
+            })
+            .catch(error => console.error(error));
+
     }
+
     return (
         <div className="hero w-full my-11">
             <div className="hero-content grid gap-20 md:grid-cols-2 flex-col lg:flex-row">
@@ -14,7 +31,7 @@ const SignUp = () => {
                 </div>
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 border-2  rounded-xl">
                     <h1 className="text-3xl font-bold text-center mt-16">Sign Up</h1>
-                    <form onSubmit={handleLogin} className="card-body">
+                    <form onSubmit={handleSignUp} className="card-body">
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text font-semibold">Email</span>
@@ -25,7 +42,7 @@ const SignUp = () => {
                             <label className="label">
                                 <span className="label-text font-semibold">Email</span>
                             </label>
-                            <input type="email" name='email' placeholder="Your email" className="input input-bordered" required/>
+                            <input type="email" name='email' placeholder="Your email" className="input input-bordered" required />
                         </div>
                         <div className="form-control">
                             <label className="label">
