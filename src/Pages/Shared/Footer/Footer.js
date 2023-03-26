@@ -3,7 +3,7 @@ import logo from '../../../assets/logo.svg';
 
 const Footer = () => {
     return (
-        <footer className="footer px-32 py-32 bg-black text-white justify-items-center items-center">
+        <footer className="footer px-32 py-32 bg-black text-white justify-items-center">
             <div>
                 <img src={logo} alt="" />
                 <p>Edwin Diaz is a software <br /> and web technologies engineer, <br /> a life coach trainer who is also a serial .</p>

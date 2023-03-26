@@ -33,6 +33,6 @@
         "id": "6420638e766f0a3f2adb99e3",
         "name": "Cools Led Light",
         "image": "https://i.ibb.co/265Wn8Q/4.png",
-        "price": "<ReferenceError: int is not defined>"
+        "price": 20.00
     }
 ]
