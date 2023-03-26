@@ -1,0 +1,38 @@
+[
+    {
+        "id": "6420638ebe136735d2fe9106",
+        "name": "Car Engine Plug",
+        "image": "https://i.ibb.co/t3ZMTJh/6.png",
+        "price": 20.00
+    },
+    {
+        "id": "6420638e29f1949da03d9f91",
+        "name": "Car Air Filter",
+        "image": "https://i.ibb.co/9tdzYZd/3.png",
+        "price": 20.00
+    },
+    {
+        "id": "6420638ebd0a61c5caa1b164",
+        "name": "Cools Led Light",
+        "image": "https://i.ibb.co/RTJfXXW/1.png",
+        "price": 20.00
+    },
+    {
+        "id": "6420638ecf8d821a6c2e193a",
+        "name": "Cools Led Light",
+        "image": "https://i.ibb.co/QC2ytpk/2.png",
+        "price": 20.00
+    },
+    {
+        "id": "6420638ec2ff2a95e294c3ee",
+        "name": "Car Tier",
+        "image": "https://i.ibb.co/f4wqQLY/5.png",
+        "price": 20.00
+    },
+    {
+        "id": "6420638e766f0a3f2adb99e3",
+        "name": "Cools Led Light",
+        "image": "https://i.ibb.co/265Wn8Q/4.png",
+        "price": "<ReferenceError: int is not defined>"
+    }
+]
