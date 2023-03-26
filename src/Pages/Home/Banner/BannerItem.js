@@ -22,7 +22,7 @@ const BannerItem = ({ slide }) => {
             </div>
             <div className="absolute flex justify-start w-2/5 transform -translate-y-1/2 left-24 top-3/4">
                 <button className="btn border-0 bg-orange-600 hover:bg-orange-600 normal-case mr-5">Discover More</button>
-                <button className="btn btn-outline btn-warning">Button</button>
+                <button className="btn btn-outline btn-warning">Latest Project</button>
             </div>
             <div className="absolute flex justify-end transform -translate-y-1/2 left-5 right-5 bottom-0">
                 <a href={`#slide${prev}`} className="btn btn-circle mr-5 hover:bg-amber-500 border-0">❮</a>

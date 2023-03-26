@@ -5,7 +5,7 @@ import { MdLocationPin } from "react-icons/md";
 
 const Contact = () => {
     return (
-        <footer className="footer px-16 py-20 lg:h-64 rounded-xl bg-black text-white my-32 justify-items-center">
+        <footer className="footer px-16 py-20 lg:h-64 rounded-xl bg-black text-white my-32 justify-items-center items-center">
             <div className='flex items-center'>
                 <FaBusinessTime className='text-4xl mr-5 text-orange-600 '></FaBusinessTime>
                 <div>

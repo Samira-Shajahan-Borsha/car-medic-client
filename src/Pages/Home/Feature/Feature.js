@@ -7,13 +7,15 @@ import { AiOutlineDeliveredProcedure } from 'react-icons/ai';
 
 const Feature = () => {
 
+    const iconClass = 'text-orange-600 w-20 h-14 hover:text-white';
+
     const features = [
-        { id: 1, name: 'Expert Team', icon: <RiTeamFill className='text-orange-600 w-20 h-14'></RiTeamFill> },
-        { id: 2, name: 'Timely Delivery', icon: <IoMdClock className='text-orange-600 w-20 h-14'></IoMdClock> },
-        { id: 3, name: '24/7 Support', icon: <MdSupportAgent className='text-orange-600 w-20 h-14'></MdSupportAgent> },
-        { id: 4, name: '100% Guranty', icon: <BsShieldFillCheck className='text-orange-600 w-20 h-14'></BsShieldFillCheck> },
-        { id: 5, name: 'Best Equipment', icon: <IoMdSettings className='text-orange-600 w-20 h-14'></IoMdSettings> },
-        { id: 6, name: 'Timely Delivery', icon: <AiOutlineDeliveredProcedure className='text-orange-600 w-20 h-14'></AiOutlineDeliveredProcedure> }
+        { id: 1, name: 'Expert Team', icon: <RiTeamFill className={iconClass}></RiTeamFill> },
+        { id: 2, name: 'Timely Delivery', icon: <IoMdClock className={iconClass}></IoMdClock> },
+        { id: 3, name: '24/7 Support', icon: <MdSupportAgent className={iconClass}></MdSupportAgent> },
+        { id: 4, name: '100% Guranty', icon: <BsShieldFillCheck className={iconClass}></BsShieldFillCheck> },
+        { id: 5, name: 'Best Equipment', icon: <IoMdSettings className={iconClass}></IoMdSettings> },
+        { id: 6, name: 'Timely Delivery', icon: <AiOutlineDeliveredProcedure className={iconClass}></AiOutlineDeliveredProcedure> }
     ];
 
     return (
@@ -21,14 +23,15 @@ const Feature = () => {
             <div className='text-center '>
                 <p className="text-2xl text-orange-600 font-bold">Core Features</p>
                 <p className="my-5 text-5xl font-bold">Why Choose Us</p>
-                <p className='mb-12 text-xl capitalize text-gray-500'>the majority have suffered alteration in some form, by injected humour, or randomised <br /> words which don't look even slightly believable. </p>
+                <p className='mb-12 text-xl text-gray-500'>We offer a full range of garage services to vehicle owners located in Park Avenue.
+                    Our professinals know <br /> how to handle a wide range of car services.</p>
             </div>
-            <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-6 sm: mb-16 justify-items-center'>
+            <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 sm: mb-16 justify-items-center'>
                 {
                     features.map(feature =>
-                        <div key={feature.id} className='w-44 h-36 flex flex-col justify-evenly items-center border-2 border-slate-100 rounded-lg'>
+                        <div key={feature.id} className='w-44 h-36 flex flex-col justify-evenly items-center border-2 border-slate-100 rounded-lg hover:bg-orange-600'>
                             {feature.icon}
-                            <p className='text-lg font-bold'>{feature.name}</p>
+                            <p className='text-lg text-black font-bold'>{feature.name}</p>
                         </div>
                     )
                 }

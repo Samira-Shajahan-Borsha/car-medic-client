@@ -13,7 +13,8 @@ const Services = () => {
             <div className='text-center '>
                 <p className="text-2xl text-orange-600 font-bold">Services</p>
                 <p className="my-5 text-5xl font-bold">Our Service Area</p>
-                <p className='mb-5 text-xl capitalize text-gray-500'>the majority have suffered alteration in some form, by injected humour, or randomised <br /> words which don't look even slightly believable. </p>
+                <p className='mb-5 text-xl text-gray-500'>We are one of the leading auto repair shops serving customers in Park Avenue.
+                    All mechanic services <br />  are performed by highly qualified mechanics.</p>
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16 justify-items-center'>
                 {
