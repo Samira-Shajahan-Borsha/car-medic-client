@@ -23,8 +23,8 @@ const Feature = () => {
             <div className='text-center '>
                 <p className="text-2xl text-orange-600 font-bold">Core Features</p>
                 <p className="my-5 text-5xl font-bold">Why Choose Us</p>
-                <p className='mb-12 text-xl text-gray-500'>We offer a full range of garage services to vehicle owners located in Park Avenue.
-                    Our professinals know <br /> how to handle a wide range of car services.</p>
+                <p className='mb-12 text-xl text-gray-500'>We are one of the leading auto repair shops serving customers in Tucson.
+                    All mechanic services <br /> are performed by highly qualified mechanics.</p>
             </div>
             <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 sm: mb-16 justify-items-center'>
                 {

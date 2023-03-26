@@ -13,8 +13,8 @@ const About = () => {
                 <div className='w-1/2'>
                     <p className='text-2xl text-orange-600 font-bold'>About Us</p>
                     <h1 className="my-5 text-5xl font-bold">We are qualified <br /> & of experience <br /> in this field</h1>
-                    <p className="py-5 text-xl">There are many variations of passages available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
-                    <p className="mb-7 text-xl">The majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.  </p>
+                    <p className="py-5 text-xl">We have invested in all the latest specialist tools and diagnostic software that is specifically tailored for the software in your vehicle.If you want the quality you would expect from the dealership, but with a more personal and friendly atmosphere, you have found it. </p>
+                    <p className="mb-7 text-xl">Our auto repair shop is capable of servicing a variety of models. We only do the work that is needed to fix your problem.</p>
                     <button className="btn border-0 bg-orange-600 hover:bg-orange-600 normal-case">Get More Info</button>
                 </div>
             </div>
