@@ -23,8 +23,8 @@ const Contact = () => {
             <div className='flex items-center'>
                 <MdLocationPin className='text-4xl mr-5 text-orange-600 '></MdLocationPin>
                 <div>
-                    <p className='text-base'>We are open monday-friday</p>
-                    <h2 className='font-bold text-2xl'>7:00 am - 9:00 pm</h2>
+                    <p className='text-base'>Need a repair? our address</p>
+                    <h2 className='font-bold text-2xl'>Park Avenue, New York</h2>
                 </div>
             </div>
         </footer>
