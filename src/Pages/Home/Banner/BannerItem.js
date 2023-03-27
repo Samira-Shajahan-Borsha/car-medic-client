@@ -2,10 +2,12 @@ import React from 'react';
 import './BannerItem.css';
 
 const BannerItem = ({ slide }) => {
+
     const { image, prev, next, id } = slide;
+    
     return (
         <div id={`slide${id}`} className="carousel-item relative w-full">
-            <div className='carousel-image'>
+            <div className='carousel-image w-full'>
                 <img src={image} className="w-full rounded-xl" alt="" />
             </div>
             <div className="carousel-info absolute flex justify-end transform -translate-y-1/2 left-24 top-1/4">
@@ -17,12 +19,12 @@ const BannerItem = ({ slide }) => {
             </div>
             <div className="absolute flex justify-end w-2/5 transform -translate-y-1/2 left-24 top-1/2">
                 <p className='text-xl text-white hidden lg:block md:block'>
-                    There are many variations of passages of  available, but the majority have suffered alteration in some form
+                    Our professionals know how to handle a wide range of car services. Whether you drive a passenger car or medium sized truck or SUV, our mechanics strive to ensure that your vehicle will be performing at its best.
                 </p>
             </div>
             <div className="absolute flex justify-start w-2/5 transform -translate-y-1/2 left-24 top-3/4">
                 <button className="btn border-0 bg-orange-600 hover:bg-orange-600 normal-case mr-5">Discover More</button>
-                <button className="btn btn-outline btn-warning hidden md:block">Latest Project</button>
+                <button className="btn btn-outline btn-warning hidden md:block">Make An Appointment</button>
             </div>
             <div className="absolute flex justify-end transform -translate-y-1/2 left-5 right-5 bottom-0">
                 <a href={`#slide${prev}`} className="btn btn-circle mr-5 hover:bg-amber-500 border-0">❮</a>
