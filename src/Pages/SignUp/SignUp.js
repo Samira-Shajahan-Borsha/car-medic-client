@@ -37,7 +37,7 @@ const SignUp = () => {
                     <form onSubmit={handleSignUp} className="card-body">
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text font-semibold">Email</span>
+                                <span className="label-text font-semibold">Name</span>
                             </label>
                             <input type="text" name='name' placeholder="Your name" className="input input-bordered" />
                         </div>

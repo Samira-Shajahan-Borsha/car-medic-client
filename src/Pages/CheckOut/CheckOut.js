@@ -28,7 +28,34 @@ const CheckOut = () => {
             email,
             phone,
             message
+        };
+
+        //input validation
+        /* if (phone.length > 10) {
+            alert('Phone should be 10 characters or longer');
         }
+        else {
+
+        } */
+
+        fetch('http://localhost:5000/orders', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(order)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.acknowledged) {
+                    alert('Order placed successfully');
+                    form.reset();
+                }
+            })
+            .catch(error => console.error(error))
+
+
 
     }
     return (
@@ -39,11 +66,11 @@ const CheckOut = () => {
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
                     <input name='firstName' type="text" placeholder="First Name" className="input input-bordered w-full" />
                     <input name='lastName' type="text" placeholder="Last Name" className="input input-bordered w-full" />
-                    <input name='phone' type="text" placeholder="Your Phone" className="input input-bordered w-full" />
+                    <input name='phone' type="text" placeholder="Your Phone" className="input input-bordered w-full" required />
                     <input name='email' type="text" defaultValue={user?.email} placeholder="Your Email" className="input input-bordered w-full" readOnly />
                 </div>
-                <textarea name='message' className="textarea textarea-bordered h-24 w-full mb-2 text-base" placeholder="Your Message"></textarea>
-                <input type="submit" className='btn border-0 w-full bg-orange-600 hover:bg-orange-600 normal-case' value="Place your order" />
+                <textarea name='message' className="textarea textarea-bordered h-24 w-full mb-2 text-base" placeholder="Your Message" required></textarea>
+                <input type="submit" className='btn border-0 w-full text-base bg-orange-600 hover:bg-orange-600 normal-case' value="Order Confirm" />
             </form>
         </div>
     );
