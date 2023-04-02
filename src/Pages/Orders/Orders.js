@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import OrderRow from './OrderRow';
+import useTitle from '../../Hooks/useTitle';
 
 const Orders = () => {
 
@@ -8,8 +9,14 @@ const Orders = () => {
 
     const [orders, setOrders] = useState([]);
 
+    useTitle('Orders');
+
     useEffect(() => {
-        fetch(`http://localhost:5000/orders?email=${user?.email}`)
+        fetch(`http://localhost:5000/orders?email=${user?.email}`, {
+            headers: {
+                authorization : `Bearer ${localStorage.getItem('car-medic-token')}`
+            }
+        })
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [user?.email]);

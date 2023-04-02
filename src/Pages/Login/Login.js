@@ -26,7 +26,7 @@ const Login = () => {
             .then(userCredential => {
                 const user = userCredential.user;
                 // console.log('login', user);
-
+                
                 const currentUser = {
                     email: user?.email
                 };
@@ -45,10 +45,9 @@ const Login = () => {
                         console.log(data);
                         //local storage is easiest . but not the best place to store jwt token.
                         localStorage.setItem('car-medic-token', data.token);
-                    })
-
-                // form.reset();
-                // navigate(from, { replace: true });
+                        form.reset();
+                        navigate(from, { replace: true });
+                    });
             })
             .catch(error => console.error(error))
     }

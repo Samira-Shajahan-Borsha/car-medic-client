@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
+import useTitle from '../../Hooks/useTitle';
 
 const CheckOut = () => {
 
@@ -9,6 +10,8 @@ const CheckOut = () => {
     const { user } = useContext(AuthContext);
 
     console.log('inside checkout page', user);
+
+    useTitle('Checkout');
 
     const handlePlaceOrder = event => {
 
