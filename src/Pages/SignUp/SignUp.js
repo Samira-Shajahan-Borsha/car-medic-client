@@ -4,6 +4,7 @@ import loginImg from '../../assets/images/login/login.svg';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import useTitle from '../../Hooks/useTitle';
 import SocialLogin from '../Shared/SocialLogin/SocialLogin';
+import { setAuthToken } from '../../api/auth';
 
 const SignUp = () => {
 
@@ -21,6 +22,7 @@ const SignUp = () => {
             .then(userCredential => {
                 const user = userCredential.user;
                 console.log(user);
+                setAuthToken(user);
                 form.reset();
             })
             .catch(error => console.error(error));
@@ -50,7 +52,7 @@ const SignUp = () => {
                         </div>
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text font-semibold">Confirm Password</span>
+                                <span className="label-text font-semibold"> Password</span>
                             </label>
                             <input type="password" name='password' placeholder="Your password" className="input input-bordered" required />
                         </div>
