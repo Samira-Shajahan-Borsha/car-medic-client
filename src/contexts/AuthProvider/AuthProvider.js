@@ -25,6 +25,7 @@ const AuthProvider = ({ children }) => {
 
     const logOut = () => {
         setLoading(true);
+        localStorage.removeItem('car-medic-token');
         return signOut(auth);
     }
 
