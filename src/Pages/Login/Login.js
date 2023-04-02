@@ -26,14 +26,14 @@ const Login = () => {
             .then(userCredential => {
                 const user = userCredential.user;
                 // console.log('login', user);
-                
+
                 const currentUser = {
                     email: user?.email
                 };
                 // console.log(currentUser);
 
                 //get jwt token
-                fetch('http://localhost:5000/jwt', {
+                fetch('https://car-medic-server.vercel.app/jwt', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'
