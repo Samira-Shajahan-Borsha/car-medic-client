@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import loginImg from '../../assets/images/login/login.svg';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import useTitle from '../../Hooks/useTitle';
+import SocialLogin from '../Shared/SocialLogin/SocialLogin';
 
 const Login = () => {
 
@@ -58,9 +59,9 @@ const Login = () => {
                 <div className="text-center lg:text-left">
                     <img className='w-3/4' src={loginImg} alt="" />
                 </div>
-                <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 border-2  rounded-xl">
+                <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 border-2 rounded-xl py-12 pt-0">
                     <h1 className="text-3xl font-bold text-center mt-16">Login </h1>
-                    <form onSubmit={handleLogin} className="card-body">
+                    <form onSubmit={handleLogin} className="card-body pb-0">
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text font-semibold">Email</span>
@@ -73,14 +74,16 @@ const Login = () => {
                             </label>
                             <input type="password" name='password' placeholder="Your password" className="input input-bordered" />
                             <label className="label">
-                                <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
+                                <Link to='' className="label-text-alt link link-hover text-xs font-medium">Forgot password?</Link>
                             </label>
                         </div>
-                        <div className="form-control mt-6">
+                        <div className="form-control mt-2">
                             <input type="submit" className="btn border-0 normal-case bg-orange-600 hover:bg-orange-600" value="Sign In" />
                         </div>
                     </form>
-                    <p className='text-center mb-16 text-lg font-semibold'>New to Car Medic? <Link to='/signup'><span className='text-orange-600'>Sign Up</span></Link></p>
+                    <p className='text-lg font-medium text-center my-2'><small>Or Sign In with</small></p>
+                    <SocialLogin></SocialLogin>
+                    <p className='text-center text-lg font-semibold'>New to Car Medic? <Link to='/signup'><span className='text-orange-600'>Sign Up</span></Link></p>
                 </div>
             </div>
         </div>

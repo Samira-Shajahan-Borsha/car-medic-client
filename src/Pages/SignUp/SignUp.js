@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import loginImg from '../../assets/images/login/login.svg';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import useTitle from '../../Hooks/useTitle';
+import SocialLogin from '../Shared/SocialLogin/SocialLogin';
 
 const SignUp = () => {
 
@@ -32,9 +33,9 @@ const SignUp = () => {
                 <div className="text-center lg:text-left">
                     <img className='w-3/4' src={loginImg} alt="" />
                 </div>
-                <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 border-2  rounded-xl">
+                <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 border-2  rounded-xl py-12 pt-0">
                     <h1 className="text-3xl font-bold text-center mt-16">Sign Up</h1>
-                    <form onSubmit={handleSignUp} className="card-body">
+                    <form onSubmit={handleSignUp} className="card-body pb-0">
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text font-semibold">Name</span>
@@ -53,11 +54,13 @@ const SignUp = () => {
                             </label>
                             <input type="password" name='password' placeholder="Your password" className="input input-bordered" required />
                         </div>
-                        <div className="form-control mt-6">
+                        <div className="form-control mt-2">
                             <input type="submit" className="btn border-0 normal-case bg-orange-600 hover:bg-orange-600" value="Sign Up" />
                         </div>
                     </form>
-                    <p className='text-center mb-16 text-lg font-semibold'>Already have an account? <Link to='/login'><span className='text-orange-600'>Log In</span></Link></p>
+                    <p className='text-lg font-medium my-2 text-center'><small>Or Sign Up with</small></p>
+                    <SocialLogin></SocialLogin>
+                    <p className='text-center mb-2 text-lg font-semibold'>Already have an account? <Link to='/login'><span className='text-orange-600'>Log In</span></Link></p>
                 </div>
             </div>
         </div>
